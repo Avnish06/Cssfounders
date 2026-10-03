@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=Architects+Daughter&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1565D8;
+  --color-primary-light: #2176FF;
+  --color-primary-dark: #0D47A1;
+  --color-secondary: #F5A623;
+  --color-accent: #FF6B35;
+  --color-navy: #0A1628;
+  --color-navy-light: #132140;
+  --color-text-dark: #1A1A2E;
+  --color-text-gray: #6B7280;
+  --color-text-light: #9CA3AF;
+  --color-bg-light: #F8FAFF;
+  --color-bg-section: #F0F4FF;
+  
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-decorative: 'Architects Daughter', cursive;
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+}
+
+@layer base {
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+}
+
+@layer utilities {
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: var(--color-bg-light);
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 3px;
+  }
+}
